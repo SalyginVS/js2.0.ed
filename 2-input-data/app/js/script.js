@@ -9,8 +9,8 @@ let div = document.querySelector('.out');
 
 button.onclick = function () {
     // кнопка будет нажата
-    console.log('Работает!!!!!!');
-    // console.log(inputIn.value); // value - то, что введено в input
+    //console.log('Работает!!!!!!');
+    console.log(inputIn.value); // value - то, что введено в input
     let b = +inputIn.value; // + перевести в число!!!!!!!
     console.log(b + 10); // '66'+10 = 6610
     div.innerHTML = b;
