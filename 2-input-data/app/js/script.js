@@ -14,5 +14,5 @@ button.onclick = function () {
     let b = +inputIn.value; // + перевести в число!!!!!!!
     console.log(b + 10); // '66'+10 = 6610
     div.innerHTML = b;
-    inputIn.value = '';
+    inputIn.value = ''; //очищает елемент input
 }
