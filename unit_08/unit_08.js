@@ -83,7 +83,7 @@ function t5() {
   while (k <= 17) {
     if (0 == k % 2) {
       out += `${k}_**`;
-    }else{
+    } else {
       out += `${k}_*`;
     }
     k++
@@ -108,7 +108,7 @@ function t6() {
   let i = document.querySelector('.i-6').value;
   while (k < i) {
     let p = 0;
-    while (p < 6){
+    while (p < 6) {
       out += '*';
       p++
     }
@@ -173,7 +173,20 @@ document.querySelector('.b-8').onclick = t8;
 // Задача решается с помощью цикла. Подсказка - вначале делаем проверку и при необходимости поменять местами значения в переменных местами, а потом запускаем цикл  while.
 
 function t9() {
-
+  let out = "";
+  let i91 = +document.querySelector('.i-91').value;
+  let i92 = +document.querySelector('.i-92').value;
+  let k;
+  if (i91 > i92) {
+    k = i91;
+    i91 = i92;
+    i92 = k;
+  }
+  while (i91 <= i92) {
+    out += `${i91}_`;
+    i91++;
+  }
+  document.querySelector('.out-9').textContent = out;
 }
 
 document.querySelector('.b-9').onclick = t9;
@@ -184,7 +197,14 @@ document.querySelector('.b-9').onclick = t9;
 // Разделитель знак подчеркивания. Задача решается через цикл, а четность - через шаг (равный 2).
 
 function t10() {
-
+  let out = '';
+  let a = 1950;
+  let b = 1966;
+  while (a <= b) {
+    out += `${a}_`;
+    a = a + 2;
+  }
+  document.querySelector('.out-10').textContent = out;
 }
 
 document.querySelector('.b-10').onclick = t10;
@@ -199,7 +219,14 @@ document.querySelector('.b-10').onclick = t10;
 
 
 function t11() {
-
+  let out = '';
+  let div11 = document.querySelectorAll('.div-11');
+  let i = 0;
+  while (i < div11.length) {
+    out += `${div11[i].innerHTML}_`;
+    i++;
+  }
+  document.querySelector('.out-11').innerHTML = out;
 }
 
 document.querySelector('.b-11').onclick = t11;
@@ -212,7 +239,13 @@ document.querySelector('.b-11').onclick = t11;
 
 
 function t12() {
-
+  let out = '';
+  let div12 = document.querySelectorAll('.div-12');
+  let i = 0;
+  while (i < div12.length) {
+    div12[i].style.backgroundColor = 'orange';
+    i++;
+  }
 }
 
 document.querySelector('.b-12').onclick = t12;
@@ -224,7 +257,13 @@ document.querySelector('.b-12').onclick = t12;
 // применить к каждому elem[i].value, причем к value первого должно равняться 1, второго - 2, третьего - 3...
 
 function t13() {
-
+  let i13 = document.querySelectorAll('.i-13');
+  let i = 0;
+  while (i < i13.length) {
+    i13[i].value = i + 1;
+    i13[i].value;
+    i++;
+  }
 }
 
 document.querySelector('.b-13').onclick = t13;
@@ -237,7 +276,15 @@ document.querySelector('.b-13').onclick = t13;
 
 
 function t14() {
-
+  let i14 = document.querySelectorAll('.i-14');
+  let i = 0;
+  while (i < i14.length) {
+    if (i14[i].checked) {
+      document.querySelector('.out-14').innerText = i14[i].value;
+      console.log(i14[i].value)
+    }
+    i++;
+  }
 }
 
 document.querySelector('.b-14').onclick = t14;
@@ -248,7 +295,18 @@ document.querySelector('.b-14').onclick = t14;
 // Для вывода использовать цикл  while. Разделитель подчеркивание.
 
 function t15() {
-
+  let out = '';
+  let i = 0;
+  let k = 77;
+  while (i < 3) {
+    while (k <= 99) {
+      out += `${k}_`;
+      k = k + 11;
+    }
+   k = 77; 
+   i++;
+  }
+  document.querySelector('.out-15').innerText = out;
 }
 
 document.querySelector('.b-15').onclick = t15;
