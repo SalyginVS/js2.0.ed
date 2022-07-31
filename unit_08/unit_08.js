@@ -25,10 +25,8 @@ function t2() {
   let out = '';
   let k = 2;
   while (k <= 46) {
-    if (0 == k % 2) {
-      out += `${k}_`;
-    }
-    k++
+    out += `${k}_`;
+    k = k + 2;
   }
   document.querySelector('.out-2').textContent = out;
 }
@@ -303,8 +301,8 @@ function t15() {
       out += `${k}_`;
       k = k + 11;
     }
-   k = 77; 
-   i++;
+    k = 77;
+    i++;
   }
   document.querySelector('.out-15').innerText = out;
 }
