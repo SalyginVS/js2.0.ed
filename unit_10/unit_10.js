@@ -45,8 +45,9 @@ document.querySelector('.b-3').onclick = f3;
 // Тест допустим массив [1,2,3,4,5,6,7,8,9,10] вывод: 1 4 9
 
 let ar4 = ['string1', true, '14', 12, false, 1, 'string2', 7, 8, 9, 10];
-let out = '';
+
 function f4() {
+  let out = '';
   for (let i = 0; i < ar4.length; i++) {
     if (0 == i) {
       out += `${ar4[i]} `;
@@ -71,7 +72,7 @@ document.querySelector('.b-4').onclick = f4;
 let ar5 = [10, 2, 8, 3, 5, 7, 1];
 
 function f5() {
-  out = 0;
+  let out = 0;
   for (let i = 0; i < ar5.length; i++) {
     if (0 == i) {
       out += ar5[i];
@@ -95,7 +96,7 @@ document.querySelector('.b-5').onclick = f5;
 let ar6 = ['vladimir', 'lion', 04, 08]
 
 function f6() {
-  out = '';
+  let out = '';
   for (let i = 0; i < ar6.length; i++) {
     out += `${ar6[i]} `;
   }
@@ -113,6 +114,7 @@ document.querySelector('.b-6').onclick = f6;
 let ar7 = ['china', 'india', 'brazil', 'japan', 'egypt'];
 
 function f7() {
+  let out = '';
   ar7[5] = 'italy';
   ar7[6] = 'turkey';
   ar7[7] = 'vietnam';
@@ -135,14 +137,16 @@ document.querySelector('.b-7').onclick = f7;
 let ar8 = [];
 
 function f8() {
+  let out = "";
   ar8[3] = 3.14;
   ar8[4] = 17;
   ar8[6] = 5;
   for (let i = 0; i < ar8.length; i++) {
-    out += `${ar8[i]}-`;
+    out += `${ar8[i]}&#x2010;`;
   }
-  document.querySelector('.out-8').textContent = out;
+  document.querySelector('.out-8').innerHTML = out;
   document.querySelector('.out-8-1').textContent = ar8.length;
+  out = "";
 }
 
 document.querySelector('.b-8').onclick = f8;
@@ -189,7 +193,7 @@ function f11() {
   let temp = ar11[2];
   ar11[2] = ar11[4];
   ar11[4] = temp;
-  out = '';
+  let out = '';
   for (let i = 0; i < ar11.length; i++) {
     out += `${ar11[i]} `;
   }
@@ -211,7 +215,7 @@ function f12() {
   let temp = ar12[0];
   ar12[0] = ar12[ar12.length - 1];
   ar12[ar12.length - 1] = temp;
-  out = '';
+  let out = '';
   for (let i = 0; i < ar12.length; i++) {
     out += `${ar12[i]} `;
   }
@@ -232,7 +236,7 @@ document.querySelector('.b-12').onclick = f12;
 let ar13 = ['test', 'west', 'list', 'class', 'best'];
 
 function f13() {
-  out = '';
+  let out = '';
   for (let i = 0; i < ar13.length; i++) {
     out += `${i} ${ar13[i]} `;
   }
@@ -251,7 +255,7 @@ document.querySelector('.b-13').onclick = f13;
 let ar14 = [1, 2, 3, 'hello', 66];
 
 function f14() {
-  out = '';
+  let out = '';
   for (let i = ar14.length - 1; i >= 0; i--) {
     out += `${ar14[i]} `;
   }
@@ -269,7 +273,7 @@ document.querySelector('.b-14').onclick = f14;
 let ar15 = [0, 2, 5, -4, 6, 22, -9, -12, 8, 12, 13, 78];
 
 function f15() {
-  out = '';
+  let out = '';
   for (let i = 0; i < ar15.length; i++) {
     if (ar15[i] > 0) out += `${ar15[i]} `;
   }
