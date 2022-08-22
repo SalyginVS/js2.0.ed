@@ -216,9 +216,7 @@ document.querySelector('.b-9').onclick = t9;
 
 function t10() {
   let out = '';
-  
-   for (let i = 0; i < 5; i++) {
-    out += ' '
+     for (let i = 0; i < 5; i++) {
     for (let k = 1; k <= 10; k++) {
       if (0 == i && k < 10) {
         out += 0;
@@ -227,6 +225,7 @@ function t10() {
     }
     out += '<br>'
   }
+  console.log(out)
   document.querySelector('.out-10').innerHTML = out;
 }
 
