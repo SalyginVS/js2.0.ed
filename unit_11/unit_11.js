@@ -57,7 +57,7 @@ document.querySelector('.b-4').onclick = f4;
 // функция выполняется при нажатии кнопки b-5
 
 function f5() {
-  d1.unshift(document.querySelector('.i-5').value);
+d1.unshift(document.querySelector('.i-5').value);
   showArr('.out-5', d1);
 }
 
@@ -88,7 +88,7 @@ document.querySelector('.b-6').onclick = f6;
 let d7 = ['china', 'india', 'brazil', 'japan', 'egypt'];
 
 function f7() {
-  // d7.length = d7.length - 1;
+  //d7.length = d7.length - 1; // в таком решении обязательна проверка на ошибку при иссякании длины
   let temp = [];
   for (let i = 0; i < d7.length - 1; i++) {
     temp[i] = d7[i];
@@ -260,11 +260,12 @@ let d161 = [5, 6, 7, 8, 9];
 let d162 = [23, 24, 56, 87];
 
 function f16() {
-  for (let i = 0; i < d161.concat(d162).length; i++) {
-    d16.push(d161.concat(d162)[i])
-  }
-  showArr('.out-16', d16);
   d16 = [];
+  // for (let i = 0; i < d161.concat(d162).length; i++) {
+  //   d16.push(d161.concat(d162)[i])
+  // }
+  d16 = d161.concat(d162);
+  showArr('.out-16', d16);
 }
 
 document.querySelector('.b-16').onclick = f16;
@@ -280,14 +281,17 @@ let d171 = ['a', 'b', 'c', 'd'];
 let d172 = [1, 2, 3, 4, 5];
 
 function f17() {
-  for (let i = 0; i < d171.length; i++) {
-    d17.push(d171[i]);
-  }
+  d17 = [];
+  // for (let i = 0; i < d171.length; i++) {
+  //   d17.push(d171[i]);
+  // }
+  // for (let i = 0; i < d172.length; i++) {
+  //   d17.push(d172[i]);
+  // }
   for (let i = 0; i < d172.length; i++) {
-    d17.push(d172[i]);
+    d17 = d171.push(d172[i]);
   }
   showArr('.out-17', d17);
-  d17 = [];
 }
 
 document.querySelector('.b-17').onclick = f17;

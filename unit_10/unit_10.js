@@ -146,7 +146,6 @@ function f8() {
   }
   document.querySelector('.out-8').innerHTML = out;
   document.querySelector('.out-8-1').textContent = ar8.length;
-  out = "";
 }
 
 document.querySelector('.b-8').onclick = f8;
@@ -289,11 +288,12 @@ document.querySelector('.b-15').onclick = f15;
 // Вывод в out-16
 
 let ar16 = [0, 2, 5, -4, 6, 22, -9, -12, 8, 12, 13, 78];
-let ar16_odd = [];
-let ar16_even = [];
-let out_odd = '';
-let out_even = '';
+
 function f16() {
+  let ar16_odd = [];
+  let ar16_even = [];
+  let out_odd = '';
+  let out_even = '';
   for (let i = 0; i < ar16.length; i++) {
     if (ar16[i] % 2 == 0) {
       ar16_even[i] = ar16[i];

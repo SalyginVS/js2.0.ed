@@ -86,7 +86,7 @@ document.querySelector('.b-7').onclick = f7;
 // По нажатию кнопки .b-8 запускайте функцию f8, которая делает toggle блокам .out-8 класс .bg-orange. Обратите внимание, что данных блоков больше одного, следовательно нужен цикл.
 
 let blocks8 = document.querySelectorAll('.out-8');
-
+console.log(blocks8)
 function f8() {
   //blocks8.forEach(function(e) {e.classList.toggle('bg-orange')});
 
