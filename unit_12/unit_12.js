@@ -3,9 +3,9 @@
 // Первая задача дана в качестве примера.
 
 function f1() {
-    let a1 = [12, [45, 87], [55, 13]];
-    document.querySelector('.out-1').innerHTML = a1[2][0];
-    return a1[2][0];
+  let a1 = [12, [45, 87], [55, 13]];
+  document.querySelector('.out-1').innerHTML = a1[2][0];
+  return a1[2][0];
 }
 
 document.querySelector('.b-1').onclick = f1;
@@ -16,9 +16,9 @@ document.querySelector('.b-1').onclick = f1;
 
 
 function f2() {
-    let a2 = [[12, 'hi'], [45, 87], [55, 13]];
-    document.querySelector('.out-2').textContent = a2[0][1];
-    return a2[0][1];
+  let a2 = [[12, 'hi'], [45, 87], [55, 13]];
+  document.querySelector('.out-2').textContent = a2[0][1];
+  return a2[0][1];
 }
 
 document.querySelector('.b-2').onclick = f2;
@@ -29,9 +29,9 @@ document.querySelector('.b-2').onclick = f2;
 
 
 function f3() {
-    let a3 = [[1, 2, 3], [3, 4, 5], [6, [7, 'my']]];
-    document.querySelector('.out-3').textContent = a3[2][1][1];
-    return a3[2][1][1];
+  let a3 = [[1, 2, 3], [3, 4, 5], [6, [7, 'my']]];
+  document.querySelector('.out-3').textContent = a3[2][1][1];
+  return a3[2][1][1];
 }
 
 document.querySelector('.b-3').onclick = f3;
@@ -42,9 +42,9 @@ document.querySelector('.b-3').onclick = f3;
 
 
 function f4() {
-    let a4 = [[1, 2, 3], 'go', [3, 4, 5], [6, [7, 'my']]];
-    document.querySelector('.out-4').textContent = a4[1];
-    return a4[1];
+  let a4 = [[1, 2, 3], 'go', [3, 4, 5], [6, [7, 'my']]];
+  document.querySelector('.out-4').textContent = a4[1];
+  return a4[1];
 }
 
 document.querySelector('.b-4').onclick = f4;
@@ -54,13 +54,13 @@ document.querySelector('.b-4').onclick = f4;
 
 
 function f5() {
-    let out = '';
-    let a5 = [[1, 2], [3, 4], [5, 6], [21, 34], [44, 56]];
-    for (let i = 0; i < a5.length; i++) {
-        if (a5[i][0] % 2 == 0) out += a5[i][0] + ' ';
-        if (a5[i][1] % 2 == 0) out += a5[i][1] + ' ';
-    }
-    document.querySelector('.out-5').innerHTML = out;
+  let out = '';
+  let a5 = [[1, 2], [3, 4], [5, 6], [21, 34], [44, 56]];
+  for (let i = 0; i < a5.length; i++) {
+    if (a5[i][0] % 2 == 0) out += a5[i][0] + ' ';
+    if (a5[i][1] % 2 == 0) out += a5[i][1] + ' ';
+  }
+  document.querySelector('.out-5').innerHTML = out;
 }
 
 document.querySelector('.b-5').onclick = f5;
@@ -70,11 +70,11 @@ document.querySelector('.b-5').onclick = f5;
 // При нажатии b-6 выполняете функцию f6. Функция должна вывести в out-6 нечетные значения из массива a6. Для перебора используем цикл. Делаем по образу предыдущей задачи.
 
 function f6() {
-    let out = '';
-    let a6 = [[1, 2], [3, 4], [5, 6], [21, 34], [44, 56]];
-    for (let i = 0; i < a6.length; i++) {
-      if (a6[i][0] % 2 != 0) out += a6[i][0] + ' ';
-      if (a6[i][1] % 2 != 0) out += a6[i][1] + ' ';
+  let out = '';
+  let a6 = [[1, 2], [3, 4], [5, 6], [21, 34], [44, 56]];
+  for (let i = 0; i < a6.length; i++) {
+    if (a6[i][0] % 2 != 0) out += a6[i][0] + ' ';
+    if (a6[i][1] % 2 != 0) out += a6[i][1] + ' ';
   }
   document.querySelector('.out-6').innerHTML = out;
 }
@@ -85,20 +85,20 @@ document.querySelector('.b-6').onclick = f6;
 // При нажатии b-7 выполняете функцию f7. Функция должна вывести в out-7 четные значения из массива a7. Как видите, вложенные массивы имеют разную длину, значит, предыдущий вариант уже не работает. Используем цикл. Вывод - через пробел.
 
 function f7() {
-    let out = '';
-    let a7 = [
-        [1, 2, 3, 9],
-        [3, 4, 7],
-        [5, 6, 8, 32],
-        [21, 34, 43],
-        [44, 56]
-    ];
-    for (let i = 0; i < a7.length; i++) {
-        for (let k = 0; k < a7[i].length; k++) {
-            if (a7[i][k] % 2 == 0) out += a7[i][k] + ' ';
-        }
+  let out = '';
+  let a7 = [
+    [1, 2, 3, 9],
+    [3, 4, 7],
+    [5, 6, 8, 32],
+    [21, 34, 43],
+    [44, 56]
+  ];
+  for (let i = 0; i < a7.length; i++) {
+    for (let k = 0; k < a7[i].length; k++) {
+      if (a7[i][k] % 2 == 0) out += a7[i][k] + ' ';
     }
-    document.querySelector('.out-7').innerHTML = out;
+  }
+  document.querySelector('.out-7').innerHTML = out;
 }
 
 document.querySelector('.b-7').onclick = f7;
@@ -107,18 +107,18 @@ document.querySelector('.b-7').onclick = f7;
 // При нажатии b-8 выполняете функцию f8. Функция должна вывести в out-8 нечетные значения из массива a8. Как видите, вложенные массивы имеют разную длину, значит, предыдущий вариант уже не работает. Используем цикл. Вывод - через пробел.
 
 function f8() {
-    let out = '';
-    let a8 = [
-        [1, 2, 3, 9],
-        [3, 4, 7],
-        [5, 6, 8, 32],
-        [21, 34, 43],
-        [44, 56]
-    ];
-    for (let i = 0; i < a8.length; i++) {
-      for (let k = 0; k < a8[i].length; k++) {
-          if (a8[i][k] % 2 != 0) out += a8[i][k] + ' ';
-      }
+  let out = '';
+  let a8 = [
+    [1, 2, 3, 9],
+    [3, 4, 7],
+    [5, 6, 8, 32],
+    [21, 34, 43],
+    [44, 56]
+  ];
+  for (let i = 0; i < a8.length; i++) {
+    for (let k = 0; k < a8[i].length; k++) {
+      if (a8[i][k] % 2 != 0) out += a8[i][k] + ' ';
+    }
   }
   document.querySelector('.out-8').innerHTML = out;
 }
@@ -129,18 +129,18 @@ document.querySelector('.b-8').onclick = f8;
 // При нажатии b-9 выполняете функцию f9. Функция должна вывести в out-9 значения из массива a9, которые больше нуля. Используем цикл. Вывод - через пробел.
 
 function f9() {
-    let out = '';
-    let a9 = [
-        [-2, 7, -3],
-        [3, 4, -7],
-        [-5, 6, -8, 32],
-        [21, -34, -43],
-        [44, -56]
-    ];
-    for (let i = 0; i < a9.length; i++) {
-      for (let k = 0; k < a9[i].length; k++) {
-          if (a9[i][k] > 0) out += a9[i][k] + ' ';
-      }
+  let out = '';
+  let a9 = [
+    [-2, 7, -3],
+    [3, 4, -7],
+    [-5, 6, -8, 32],
+    [21, -34, -43],
+    [44, -56]
+  ];
+  for (let i = 0; i < a9.length; i++) {
+    for (let k = 0; k < a9[i].length; k++) {
+      if (a9[i][k] > 0) out += a9[i][k] + ' ';
+    }
   }
   document.querySelector('.out-9').innerHTML = out;
 }
@@ -151,18 +151,18 @@ document.querySelector('.b-9').onclick = f9;
 // При нажатии b-10 выполняете функцию f10. Функция должна вывести в out-10 значения из массива a10, которые являются строкой. Используем цикл. Вывод - через пробел.
 
 function f10() {
-    let out = '';
-    let a10 = [
-        [-2, '7', -3],
-        [3, 4, -7],
-        [-5, 6, -8, 32, 'a'],
-        ['st', 21, -34, -43],
-        [44, -56, 'task']
-    ];
-    for (let i = 0; i < a10.length; i++) {
-      for (let k = 0; k < a10[i].length; k++) {
-          if (typeof a10[i][k] === 'string') out += a10[i][k] + ' ';
-      }
+  let out = '';
+  let a10 = [
+    [-2, '7', -3],
+    [3, 4, -7],
+    [-5, 6, -8, 32, 'a'],
+    ['st', 21, -34, -43],
+    [44, -56, 'task']
+  ];
+  for (let i = 0; i < a10.length; i++) {
+    for (let k = 0; k < a10[i].length; k++) {
+      if (typeof a10[i][k] === 'string') out += a10[i][k] + ' ';
+    }
   }
   document.querySelector('.out-10').innerHTML = out;
 }
@@ -174,19 +174,19 @@ document.querySelector('.b-10').onclick = f10;
 // При нажатии b-11 выполняете функцию f11. Функция должна вывести в out-11 значения из массива a11, причем каждый вложенный массив должен идти в обратном порядке. Вывод через пробел. Т.е. вы должны получить в out-10 строку вида 6 5 4 8 7 13 12 11 10 9. Решаем задачу двумя циклами, без reverse.
 
 let a11 = [
-    [4, 5, 6],
-    [7, 8],
-    [9, 10, 11, 12, 13]
+  [4, 5, 6],
+  [7, 8],
+  [9, 10, 11, 12, 13]
 ];
 
 function f11() {
-    let out = '';
-    for (let i = 0; i < a11.length; i++) {
-      for (let k = a11[i].length-1; k >= 0; k--){
-        out += `${a11[i][k]} `;
-      }
+  let out = '';
+  for (let i = 0; i < a11.length; i++) {
+    for (let k = a11[i].length - 1; k >= 0; k--) {
+      out += `${a11[i][k]} `;
     }
-    document.querySelector('.out-11').innerHTML = out;
+  }
+  document.querySelector('.out-11').innerHTML = out;
 }
 
 document.querySelector('.b-11').onclick = f11;
@@ -195,17 +195,23 @@ document.querySelector('.b-11').onclick = f11;
 // Дан массив a12 который моделирует шахматную доску. Используя цикл выведите в out-12 единицы из этого массива. Все действия в функции f12. Функция запускается при нажатии на b12. Вывод через пробел.
 
 function f12() {
-    let a12 = [
-        [0,1,0,1,0,1,0,1],
-        [1,0,1,0,1,0,1,0],
-        [0,1,0,1,0,1,0,1],
-        [1,0,1,0,1,0,1,0],
-        [0,1,0,1,0,1,0,1],
-        [1,0,1,0,1,0,1,0],
-        [0,1,0,1,0,1,0,1],
-        [1,0,1,0,1,0,1,0],
-    ];
-    
+  let a12 = [
+    [0, 1, 0, 1, 0, 1, 0, 1],
+    [1, 0, 1, 0, 1, 0, 1, 0],
+    [0, 1, 0, 1, 0, 1, 0, 1],
+    [1, 0, 1, 0, 1, 0, 1, 0],
+    [0, 1, 0, 1, 0, 1, 0, 1],
+    [1, 0, 1, 0, 1, 0, 1, 0],
+    [0, 1, 0, 1, 0, 1, 0, 1],
+    [1, 0, 1, 0, 1, 0, 1, 0],
+  ];
+  let out = '';
+  for (let i = 0; i < a12.length; i++) {
+    for (let k = 0; k < a12[i].length; k++) {
+      if (a12[i][k] == 1) out += `${a12[i][k]} `;
+    }
+  }
+  document.querySelector('.out-12').textContent = out;
 }
 
 document.querySelector('.b-12').onclick = f12;
@@ -216,7 +222,23 @@ document.querySelector('.b-12').onclick = f12;
 let a13 = [];
 
 function f13() {
-
+  a13 = [];
+  let n = 0;
+  for (let i = 0; i < 8; i++) {
+    let j = [];
+    for (let k = 0; k < 8; k++) {
+      if (n % 2 === 0) {
+        j.push(0);
+      }
+      else {
+        j.push(1);
+      }
+      n++;
+    }
+    a13.push(j);
+    n++;
+  }
+  console.log(a13);
 }
 
 document.querySelector('.b-13').onclick = f13;
@@ -226,15 +248,19 @@ document.querySelector('.b-13').onclick = f13;
 // т.е ожидаем 0 2 4 ...
 
 let a14 = [
-    [],
-    [1,0],
-    [1,0,0,0],
-    [3,4,5,6,7,8],
-    [1,2]
+  [],
+  [1, 0],
+  [1, 0, 0, 0],
+  [3, 4, 5, 6, 7, 8],
+  [1, 2]
 ];
 
 function f14() {
-
+  let out = '';
+  for (let i = 0; i < a14.length; i++) {
+    out += `${a14[i].length} `;
+  }
+  document.querySelector('.out-14').textContent = out;
 }
 
 document.querySelector('.b-14').onclick = f14;
@@ -244,15 +270,19 @@ document.querySelector('.b-14').onclick = f14;
 // т.е ожидаем 6
 
 let a15 = [
-    [],
-    [1,0],
-    [1,0,0,0],
-    [3,4,5,6,7,8],
-    [1,2]
+  [],
+  [1, 0],
+  [1, 0, 0, 0],
+  [3, 4, 5, 6, 7, 8],
+  [1, 2]
 ];
 
 function f15() {
-
+  let l = 0;
+  for (let i = 0; i < a15.length; i++) {
+    if (a15[i].length > l) l = a15[i].length;
+  }
+  document.querySelector('.out-15').textContent = l;
 }
 
 document.querySelector('.b-15').onclick = f15;
@@ -262,10 +292,10 @@ document.querySelector('.b-15').onclick = f15;
 // Ответ в данной задаче прописан сразу. Т.е вы руками просто пишите массив такой, чтобы условия выполнялись.
 
 let a16 = [
-    [0,7,0,6],
-    0,
-    0,
-    8
+  [0, 7, 0, 6],
+  0,
+  0,
+  8
 ];
 
 console.group('Task 16 ================');
