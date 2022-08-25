@@ -454,10 +454,13 @@ let a20 = {
 }
 
 function f20() {
-out = '';
-for (let key in a20) {
-  
-}
+  out = '';
+  for (let key in a20) {
+    for (i = 0; i < a19[key].length; i++) {
+      if (a20[key][i][1] == 2) out += `${a20[key][i][0]} `
+    }
+  }
+  document.querySelector('.out-20').textContent = out;
 }
 
 document.querySelector('.b-20').onclick = f20
