@@ -432,11 +432,12 @@ let a19 = {
 }
 
 function f19() {
-  let i19 = document.querySelector('.i-19').value;
+  let i19 = document.querySelector('.i-19').value.toLowerCase();
+  console.log(i19)
   out = '';
   for (let key in a19) {
     for (i = 0; i < a19[key].length; i++) {
-      if (a19[key][i] == i19) out = `${key}`;
+      if (a19[key][i].toLowerCase() == i19) out = `${key}`;
     }
   }
   document.querySelector('.out-19').textContent = out;

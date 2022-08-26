@@ -241,7 +241,7 @@ function t12() {
   let div12 = document.querySelectorAll('.div-12');
   let i = 0;
   while (i < div12.length) {
-    div12[i].style.backgroundColor = 'orange';
+    div12[i].style.background = 'orange';
     i++;
   }
 }
