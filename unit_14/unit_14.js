@@ -181,6 +181,8 @@ document.querySelector('.weather-card__items').append(elCardHumi);
 
 
 
+
+
 function getWeather() {
   const cityId = document.querySelector('#city').value;
   fetch(`${param.url}weather?id=${cityId}&lang=ru&units=metric&APPID=${param.appid}`)

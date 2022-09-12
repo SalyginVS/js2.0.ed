@@ -19,11 +19,12 @@ body {
 }
 
 .weather-card {
+  border-radius: 10px;
   max-width: 350px;
   margin-bottom: 100px;
   padding: 40px;
   border: 1px solid green ;
-  border-radius: 10px;
+
 }
 
 .weather-card__title {
