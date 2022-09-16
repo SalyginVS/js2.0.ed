@@ -100,7 +100,11 @@ document.querySelector('.b-6').addEventListener('click', f6);
 let a7 = [{ id: 23, name: 'Ivan' }, { id: 45, name: 'Petr' }];
 
 function f7() {
-
+  let o = new Object();
+  for (let item of a7) {
+    o[item.id] = item.name;
+  }
+  return o;
 }
 
 document.querySelector('.b-7').addEventListener('click', () => {
@@ -114,7 +118,11 @@ document.querySelector('.b-7').addEventListener('click', () => {
 let a8 = [{ id: 23, name: 'Ivan' }, { id: 45, name: 'Petr' }];
 
 function f8() {
-
+  let a = [];
+  for (let item of a8) {
+    a.push(item.id);
+  }
+  return a;
 }
 
 document.querySelector('.b-8').addEventListener('click', () => {
@@ -127,7 +135,15 @@ document.querySelector('.b-8').addEventListener('click', () => {
 let a9 = [[4, 3, 2], [2, 5], [0, 0, 0, 0, 0]];
 
 function f9() {
-
+  let l = 0;
+  let i = 0;
+  for (let item of a9) {
+    if (item.length > l) {
+      l = item.length;
+    }
+  }
+  i = l - 1;
+  return i;
 }
 
 document.querySelector('.b-9').addEventListener('click', () => {
@@ -140,7 +156,11 @@ document.querySelector('.b-9').addEventListener('click', () => {
 let a10 = [4, 6, 9, 'Hello'];
 
 function f10() {
-
+  let o = new Object;
+  for (let item of a10) {
+    o[item] = item;
+  }
+  return o;
 }
 
 document.querySelector('.b-10').addEventListener('click', () => {
@@ -158,7 +178,13 @@ let a11 = {
 }
 
 function f11() {
-
+  out = '';
+  for (let key in a11) {
+    if (a11[key] > 10) {
+      out += `${a11[key]} `;
+    }
+  }
+  document.querySelector('.out-11').textContent = out;
 }
 
 document.querySelector('.b-11').addEventListener('click', f11);
@@ -169,7 +195,11 @@ document.querySelector('.b-11').addEventListener('click', f11);
 let a12 = [4, 5, 6, 7];
 
 function f12() {
-
+  let out = '';
+  for (let item of a12) {
+    out += `${item} `;
+  }
+  document.querySelector('.out-12').textContent = out;
 }
 
 document.querySelector('.b-12').addEventListener('click', f12);
@@ -181,7 +211,11 @@ document.querySelector('.b-12').addEventListener('click', f12);
 let a13 = 'testone';
 
 function f13() {
-
+  let out = '';
+  for (let item of a13) {
+    out += `${item} `;
+  }
+  document.querySelector('.out-13').textContent = out;
 }
 
 document.querySelector('.b-13').addEventListener('click', f13);
@@ -194,7 +228,11 @@ document.querySelector('.b-13').addEventListener('click', f13);
 let a14 = new Set([4, 5, 6]);
 
 function f14() {
-
+  let out = '';
+  for (let item of a14) {
+    out += `${item} `;
+  }
+  document.querySelector('.out-14').textContent = out;
 }
 
 document.querySelector('.b-14').addEventListener('click', f14);
@@ -204,7 +242,10 @@ document.querySelector('.b-14').addEventListener('click', f14);
 
 
 function f15() {
-
+  nList = document.querySelectorAll('.out-15')
+  for (let item of nList) {
+    item.textContent = 15;
+  }
 }
 
 document.querySelector('.b-15').addEventListener('click', f15);
