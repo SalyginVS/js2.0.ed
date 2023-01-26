@@ -21,7 +21,7 @@ document.querySelector('.b-1').onclick = t1;
 
 function t2() {
   let out = '';
-  for (let i = 12; i <= 38; i = i + 2) {
+  for (let i = 12; i <= 38; i += 2) {
     out += i + '_';
   }
   document.querySelector('.out-2').innerHTML = out;
@@ -37,7 +37,7 @@ document.querySelector('.b-2').onclick = t2;
 
 function t3() {
   let out = '';
-  for (let i = 25; i >= 7; i = i - 1) {
+  for (let i = 25; i >= 7; i--) {
     out += i + '_';
   }
   document.querySelector('.out-3').innerHTML = out;
@@ -53,7 +53,7 @@ document.querySelector('.b-3').onclick = t3;
 
 function t4() {
   let out = '';
-  for (let i = 77; i >= 35; i = i - 3) {
+  for (let i = 77; i >= 35; i -= 3) {
     out += i + '_';
   }
   document.querySelector('.out-4').innerHTML = out;
@@ -113,7 +113,7 @@ document.querySelector('.b-6').onclick = t6;
 function t7() {
   let out = '';
   let inpt = document.querySelector('.i-7').value;
-  for (inpt; inpt >= 0; inpt = inpt - 1) {
+  for (inpt; inpt >= 0; inpt -= 1) {
     out += inpt + '_';
   }
   document.querySelector('.out-7').innerHTML = out;
@@ -201,9 +201,9 @@ function t11() {
   let out = '';
   let divs11 = document.querySelectorAll('div.div-11');
   for (let i = 0; i < divs11.length; i++) {
-    out += divs11[i].innerHTML + '_';
+    out += divs11[i].innerText + '_';
   }
-  document.querySelector('.out-11').innerHTML = out;
+  document.querySelector('.out-11').innerText = out;
 }
 
 document.querySelector('.b-11').onclick = t11;
@@ -217,8 +217,11 @@ document.querySelector('.b-11').onclick = t11;
 
 function t12() {
   let elem = document.querySelectorAll('div.div-12');
-  for (let i = 0; i < elem.length; i++)
-    elem[i].style.background = "orange";
+  for (let i = 0; i < elem.length; i++) {
+    elem[i].style.marginBottom = "30px";
+    elem[i].style.backgroundColor = "orange";
+    elem[i].style.border = '3px solid red';
+  }
 }
 
 document.querySelector('.b-12').onclick = t12;
