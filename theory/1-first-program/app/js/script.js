@@ -16,13 +16,13 @@ document.getElementById('out').innerHTML = 2019;
 document.getElementById('out').innerHTML = '<b>2020</b>';
 
 document.querySelector('.header').innerHTML = 15;
-document.querySelector('#one').innerHTML = 777; // есть #
-document.getElementById('one').innerHTML = 888; // нет #
+// document.querySelector('#one').innerHTML = 777; // есть #
+// document.getElementById('one').innerHTML = 888; // нет #
 
 let b; // var a - устарело
 let a = document.querySelector('#one'); // внутрь a получил параграф
 let c;
 c = document.querySelector('.header');
 
-a.innerHTML = 9999; // new! - ошибка 
-c.innerHTML = 6666;
+// a.innerHTML = 9999; // назвать переменную new - ошибка , так как new - зарезервированое слово
+// c.innerHTML = 6666;
